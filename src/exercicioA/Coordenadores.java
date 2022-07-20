@@ -5,10 +5,18 @@ public class Coordenadores extends Funcionarios {
     private int professoresSupervisionados;
     private int quantidadeProfessor;
 
-    public Coordenadores(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, double aumento, double salarioFinal, int professoresSupervisionados, int quantidadeProfessor) {
+    public Coordenadores() {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario, aumento, salarioFinal);
         this.professoresSupervisionados = professoresSupervisionados;
         this.quantidadeProfessor = quantidadeProfessor;
+    }
+    @Override
+    public void aumentoSalarial() {
+        double aumento = 0.05;
+    }
+    @Override
+    public void Reembolso() {
+        System.out.println("Reembolso feito");
     }
 
     public int getProfessoresSupervisionados() {
@@ -28,9 +36,5 @@ public class Coordenadores extends Funcionarios {
     }
     public void adicionarProfessor(){
         quantidadeProfessor = professoresSupervisionados++;
-    }
-    @Override
-    public void aumentoSalarial() {
-        double aumento = 0.05;
     }
 }

@@ -19,6 +19,13 @@ public abstract class Funcionarios {
         this.aumento = aumento;
         this.salarioFinal = salarioFinal;
     }
+    public void aumentoSalarial(){
+        double aumento = 0.1;
+        double salarioFinal = salario + aumento;
+    }
+    public void Reembolso(){
+            System.out.println("Reembolso feito");
+        }
 
     public String getNome() {
         return nome;
@@ -74,9 +81,5 @@ public abstract class Funcionarios {
 
     public void setSalarioFinal(double salarioFinal) {
         this.salarioFinal = salarioFinal;
-    }
-    public void aumentoSalarial(){
-        double aumento = 0.1;
-        double salarioFinal = salario + aumento;
     }
 }

@@ -5,10 +5,18 @@ public class FuncionariosAdministrativos extends Funcionarios {
     private String funcaoAdministrativa;
     private String senioridade;
 
-    public FuncionariosAdministrativos(String nome, String cpf, String numeroRegistro, String orgaoLotacao, double salario, double aumento, double salarioFinal, String funcaoAdministrativa, String senioridade) {
+    public FuncionariosAdministrativos() {
         super(nome, cpf, numeroRegistro, orgaoLotacao, salario, aumento, salarioFinal);
         this.funcaoAdministrativa = funcaoAdministrativa;
         this.senioridade = senioridade;
+    }
+    @Override
+    public void aumentoSalarial() {
+        double aumento = 0.10;
+    }
+    @Override
+    public void Reembolso() {
+        System.out.println("Reembolso feito");
     }
 
     public String getFuncaoAdministrativa() {
@@ -25,10 +33,5 @@ public class FuncionariosAdministrativos extends Funcionarios {
 
     public void setSenioridade(String senioridade) {
         this.senioridade = senioridade;
-    }
-
-    @Override
-    public void aumentoSalarial() {
-        double aumento = 0.10;
     }
 }
